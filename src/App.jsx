@@ -1,32 +1,42 @@
-import { Route, Routes } from 'react-router-dom'
+import React, { useEffect } from 'react'
 
-import TopNav from './components/TopNav.jsx'
-import Home from './Pages/Home.jsx'
-import About from './Pages/About.jsx'
-import Portfolio from './Pages/Portfolio.jsx'
-import Blog from './Pages/Blog.jsx'
-import Contact from './Pages/Contact.jsx'
+import homeBg from './assets/home-bg.png'
+
+import {
+  TopNav, Footer, PDFViewer
+} from './components'
+import {
+  Home, About, Portfolio, Blog, Contact
+} from './sections'
+
 
 function App() {
+  localStorage.clear()
+
   return (
-    <>
-      {/* Background */}
-      <img className='absolute top-0 left-0 w-full h-screen object-cover object-top' src="https://cdn.discordapp.com/attachments/1082556898399756288/1100806433089540238/home-image.png" alt="Background-Image" />
-      <div className='absolute top-0 left-0 w-full h-screen bg-white/30 scale-[97%] 2xl:scale-x-[98%] rounded-3xl hidden md:block backdrop-blur-sm shadow-xl' />
+    <React.Fragment>
+      <img 
+        className='absolute top-0 left-0 w-full h-screen object-cover object-top transition-all shadow-xl'
+        src={homeBg}
+        alt="Background-Image"
+      />
+      <div className='absolute top-0 left-0 w-full h-screen bg-slate-200/50 hidden md:block rounded-[1rem] scale-y-[96%] scale-x-[94%] lg:scale-x-[95%] xl:scale-x-[96%] 2xl:scale-x-[97%] shadow-lg backdrop-blur-md' />
+      
+      <PDFViewer />
 
       <TopNav />
-
-      <div className='absolute top-0 left-0 w-full'>
-        <Routes>
-          <Route path='/' element={<Home />} />
-          <Route path='/about' element={<About />} />
-          <Route path='/portfolio' element={<Portfolio />} />
-          <Route path='/blog' element={<Blog />} />
-          <Route path='/contact' element={<Contact />} />
-        </Routes>
+      <div className='translate-y-[4rem] md:translate-y-[6rem]'>
+        <main className='overflow-hidden pb-6'>
+          <Home />
+          <About />
+          <Portfolio />
+          <Blog />
+          <Contact />
+        </main>
+        <Footer />
       </div>
-
-    </>
+      
+    </React.Fragment>
   )
 }
 

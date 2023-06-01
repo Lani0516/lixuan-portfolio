@@ -1,0 +1,20 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.react-pdf__Page {
+    border-radius: 8px;
+    position: absolute;
+    height: 100vh;
+    background-color: transparent !important;
+    backdrop-filter: blur(5px) brightness(80%);
+    .react-pdf__Page__canvas {
+        border-radius: 8px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
+    }
+}

@@ -17,7 +17,7 @@ export default {
       },
       animation: {
         'animatedBorder': 'animatedBorder 8s ease-in-out infinite 1s'
-      }
+      },
     },
   },
   plugins: [],
