@@ -4,34 +4,35 @@ import {
   useElementOnScreen
 } from '../hooks'
 
+
 const data = [
   {
     year: 2013,
     title: '德和國小',
     duration: '6 Years',
     description: 
-      '其實這裡我不知道要寫些什麼，所以呢！'
+      '培養基礎數理能力，打下學習的根基。'
   },
   {
     year: 2018,
     title: '銘傳國中',
     duration: '3 Years',
     description: 
-      '你接下來會看到一大堆的廢話，不要讀了。'
+      '增進基礎代數、邏輯、幾何、算數的工具，以及找尋自己的興趣。'
   },
   {
     year: 2021,
     title: '市立中崙高中',
     duration: '3 Years',
     description: 
-      '認真的啦，你可以停了，都是廢話。'
+      '專精數物化工具，培育人文、古典素養，探索未來方向。'
   },
   {
     year: 2024,
-    title: '國立成功大學 電機系',
+    title: '國立成功大學 測量及空間資訊學系',
     duration: '4 Years',
     description: 
-      '其實人生可以過的更好的，但你浪費在這了。'
+      '尚未開始。'
   },
 ]
 
@@ -41,21 +42,28 @@ const work = [
     title: 'Google',
     duration: '2 Years',
     description: 
-      '我還是不知道這裡該寫些什麼。'
+      '以下列出了一些未來的夢想職涯目標，僅供個人參考用。'
   },
   {
     year: 2028,
     title: 'Microsoft',
     duration: '4 Years',
     description: 
-      '所以就當陳莉軒在18歲，就有了20年的工作經驗吧。'
+      'WIP'
   },
   {
     year: 2032,
     title: 'Apple',
     duration: '14 Years',
     description: 
-      '讚讚！'
+      'WIP'
+  },
+  {
+    year: 2046,
+    title: 'Tesla',
+    duration: 'Current',
+    description: 
+      '致力於研發 Level 5 自動駕駛。'
   },
 ]
 
@@ -76,13 +84,13 @@ const About = () => {
   })
 
   return (
-    <section ref={targetRef} className={`${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-[-10%]' } transition-all duration-500 flex items-center justify-center flex-col md:flex-row gap-6 2xl:gap-24 bg-white mx-6 py-8 rounded-xl shadow-lg px-8 md:px-12 flex-wrap`}>
+    <section ref={targetRef} className={`${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-[-10%]' } transition-all duration-500 flex items-center justify-center flex-col gap-6 2xl:gap-12 bg-white mx-6 py-8 rounded-xl shadow-lg px-8 md:px-12 flex-wrap`}>
       <h1 className='text-[2rem] md:text-[4rem] leading-[2rem] text-gray-600 font-bold md:my-4'>
         About
       </h1>
 
       <div className='flex flex-col md:flex-row gap-4 xl:gap-0 xl:items-center'>
-        <article className='p-4 mx-6'>
+        <article className='p-4 mx-2 flex flex-col items-center'>
           {data.map((item, idx) => {
             return (
               <AboutItem
@@ -94,7 +102,7 @@ const About = () => {
               )})}
         </article>
 
-        <article className='p-4 mx-6 border-t-2 border-dashed md:border-none -translate-y-3 md:translate-y-0'>
+        <article className='p-4 mx-2 border-t-2 border-dashed md:border-none -translate-y-3 md:translate-y-0'>
           {work.map((item, idx) => {
             return (
               <AboutItem
@@ -111,8 +119,8 @@ const About = () => {
 }
 const AboutItem = ({ year, title, duration, description }) => {
   return (
-    <ol className='flex flex-col md:flex-row relative border-l border-slate-200 sclae-90'>
-      <li className='mb-10 ml-4'>
+    <ol className='flex flex-col md:flex-row relative border-l border-slate-200 sclae-90 w-3/4'>
+      <li  className='mb-10 ml-4'>
         <div className='absolute w-3 h-3 bg-slate-300 rounded-full mt-1.5 -left-1.5 border-white' />
         <p className='flex flex-wrap gap-4 flex-row items-center justify-start text-xs md:text-sm'>
           <span className='inline-block px-2 p-1 font-semibold text-white bg-slate-600 rounded-md'>

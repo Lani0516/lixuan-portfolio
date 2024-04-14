@@ -18,7 +18,7 @@ import pdfThree from '../assets/portfolio/台北市立中崙高中_陳莉軒 物
 const PDFViewer = () => {
 	const [displayPDF, setDisplayPDF] = useState(false)
 
-  const [pdfFile, setPDFFile] = useState(null)
+  const [pdfFile, setPDFFile] = useState(pdfOne)
 
 	const windowHeight = useRef(window.innerHeight)
   
@@ -63,7 +63,7 @@ const PDFViewer = () => {
             break
           }
         }
-        return console.log(pdfFile)
+        return console.log('Displaying: ' + pdfFile)
       }
       setDisplayPDF(false)
     }

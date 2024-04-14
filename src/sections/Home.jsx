@@ -49,7 +49,7 @@ const Home = () => {
         </h2>
         <div className='flex w-full flex-col md:flex-row items-center md:items-start md:-translate-y-3 lg:translate-y-[10px] md:translate-x-[-8px]'>
           <div className='flex translate-y-[-7px] gap-1'>
-            <IconButton href='https://www.instagram.com/zlpc2_lililililixuan/'>
+            <IconButton href='https://www.instagram.com/jinriheon/'>
               <FaInstagram />
             </IconButton>
             <IconButton href='https://github.com/lixuan1128'>

@@ -42,7 +42,7 @@ const Footer = () => {
           Copyright &copy; {currentYear} by Lixuan Chen & Lani Liu.
         </span>
         <div className='flex'>
-          <IconButton href='https://www.instagram.com/zlpc2_lililililixuan/'>
+          <IconButton href='https://www.instagram.com/jinriheon/'>
             <FaInstagram />
           </IconButton>
           <IconButton href='https://github.com/lixuan1128'>

@@ -51,8 +51,6 @@ const PortfolioItem = ({ name, image, altName }) => {
     onMouseLeave: () => setShowName(false)
   }
 
-  const [displayingPDF, setDisplayingPDF] = useState()
-
   return (
     <div 
       { ...triggers }
